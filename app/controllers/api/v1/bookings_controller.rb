@@ -1,9 +1,9 @@
 class Api::V1::Bookings_Controller < Api::V1::BaseController
-  skip_before_action :verify_authenticity_token, only: [:create, :update]
-  before_action :set_bookings, only: [:show, :update]
+  skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
+  before_action :set_bookings, only: [:show, :update, :destroy]
 
   def index
-    @stories = Booking.order(created_at: :desc)
+    @bookings = Booking.order(created_at: :desc)
   end
 
   def show
@@ -42,6 +42,6 @@ class Api::V1::Bookings_Controller < Api::V1::BaseController
   end
 
   def bookings_params
-    params.require(:bookings).permit(:model, :top_speed, :price, :availability, :location, :battery, :year, :user_id)
+    params.require(:bookings).permit(:booking_time, :user_id, :scooter_id)
   end
 end

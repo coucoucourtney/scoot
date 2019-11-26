@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:create, :update, :show, :destroy]
       resources :scooters, only: [:create, :update, :show, :destroy]
-      resources :bookings, only: [:create, :show]
+      resources :bookings, only: [:create, :show, :destroy]
     end
   end
 end

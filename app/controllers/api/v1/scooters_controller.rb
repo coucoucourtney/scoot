@@ -1,9 +1,9 @@
 class Api::V1::ScootersController < Api::V1::BaseController
-  skip_before_action :verify_authenticity_token, only: [:create, :update]
-  before_action :set_scooter, only: [:show, :update]
+  skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
+  before_action :set_scooter, only: [:show, :update, :destroy]
 
   def index
-    @stories = Scooter.order(created_at: :desc)
+    @scooters = Scooter.order(created_at: :desc)
   end
 
   def show
