@@ -8,16 +8,26 @@
 
 
 
-User.destroy_all
+# User.destroy_all
 
+# users = [
+#   { name:'Mo', description: 'Hello World', phone_number: '12345678', open_id: 'achung020' },
+#   { name:'Fabien', description: 'Hello World', phone_number: '12345678', open_id: 'achung020' },
+#   { name:'Brian', description: 'Hello World', phone_number: '12345678', open_id: 'achung020'  },
+#   { name:'Forrest', description: 'Hello World', phone_number: '12345678', open_id: 'achung020'  }
+# ]
 
-users = [
-  { name:'Mo', description: 'Hello World', email: 'ichung010@gmail.com', phone_number: '12345678', open_id: 'achung020' },
-  { name:'Fabien', description: 'Hello World', email: 'ichung010@gmail.com', phone_number: '12345678', open_id: 'achung020' },
-  { name:'Brian', description: 'Hello World', email: 'ichung010@gmail.com', phone_number: '12345678', open_id: 'achung020'  },
-  { name:'Forrest', description: 'Hello World', email: 'ichung010@gmail.com', phone_number: '12345678', open_id: 'achung020'  }
+# User.create(users)
+
+Scooter.destroy_all
+scooters = [
+
+  { model:'xyz', top_speed: '50km', price: '500rmb', availability: 'true', location: '123 main st', battery: '48vh', year: '2019', user_id: 9 },
+  { model:'fyi', top_speed: '50km', price: '500rmb', availability: 'true', location: '123 main st', battery: '48vh', year: '2019', user_id: 10 },
+  { model:'two', top_speed: '50km', price: '500rmb', availability: 'true', location: '123 main st', battery: '48vh', year: '2019', user_id: 11 },
+  { model:'seven', top_speed: '50km', price: '500rmb', availability: 'true', location: '123 main st', battery: '48vh', year: '2019', user_id: 12 }
+
 ]
+Scooter.create!(scooters)
 
-User.create(users)
-
-puts User.all
+puts Scooter.count
