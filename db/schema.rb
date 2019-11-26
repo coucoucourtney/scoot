@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_26_055734) do
+ActiveRecord::Schema.define(version: 2019_11_26_100854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.datetime "booking_time"
     t.bigint "user_id"
     t.bigint "scooter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "confirmation", default: false
     t.index ["scooter_id"], name: "index_bookings_on_scooter_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
