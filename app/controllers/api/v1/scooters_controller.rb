@@ -45,4 +45,3 @@ class Api::V1::ScootersController < Api::V1::BaseController
     params.require(:scooter).permit(:model, :top_speed, :price, :availability, :location, :battery, :year, :user_id)
   end
 end
-end

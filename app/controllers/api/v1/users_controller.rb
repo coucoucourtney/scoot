@@ -25,6 +25,11 @@ class Api::V1::UsersController < Api::V1::BaseController
     end
   end
 
+  def destroy
+    @scooter.destroy
+    head :no_content
+  end
+
   private
 
   def set_user
