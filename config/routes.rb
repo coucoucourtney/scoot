@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, only: [:create, :update, :show, :destroy]
-      resources :scooters, only: [:create, :update, :show, :destroy]
+      resources :scooters, only: [:index, :create, :update, :show, :destroy]
       resources :bookings, only: [:create, :show, :destroy]
     end
   end

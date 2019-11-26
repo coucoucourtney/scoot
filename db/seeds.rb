@@ -48,4 +48,4 @@ puts Scooter.count
 
 
 
-Booking.create!( {booking_time: '10pm', user_id: 21, scooter_id: 9 } )
+# Booking.create!( {confirmation: 'true', user_id: 1, scooter_id: 1 } )
