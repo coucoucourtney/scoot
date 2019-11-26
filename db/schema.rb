@@ -10,21 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_105716) do
+ActiveRecord::Schema.define(version: 2019_11_26_044419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "scooters", force: :cascade do |t|
+    t.string "model"
+    t.string "top_speed"
+    t.string "price"
+    t.boolean "availability"
+    t.string "location"
+    t.string "battery"
+    t.string "year"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "picture"
+    t.index ["user_id"], name: "index_scooters_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.string "description"
-    t.string "avatar"
-    t.string "email"
     t.string "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "open_id"
+    t.string "avatar"
   end
 
+  add_foreign_key "scooters", "users"
 end
