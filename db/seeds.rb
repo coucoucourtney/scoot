@@ -8,8 +8,8 @@
 
 
 
-User.destroy_all
 Scooter.destroy_all
+User.destroy_all
 
 data1 = { name:'Mo', description: 'Hello World', phone_number: '12345678', location: '12389 xiao xiao lu shanghai', open_id: 'achung020', avatar: 'https://images.unsplash.com/photo-1537815749002-de6a533c64db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'  }
 
