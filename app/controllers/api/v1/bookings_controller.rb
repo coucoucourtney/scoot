@@ -10,7 +10,7 @@ class Api::V1::BookingsController < Api::V1::BaseController
   end
 
   def update
-    if @bookings.update(bookings_params)
+    if @booking.update(bookings_params)
       render :show
     else
       render_errors
@@ -18,8 +18,8 @@ class Api::V1::BookingsController < Api::V1::BaseController
   end
 
   def create
-    @bookings = Booking.new(bookings_params)
-    if @bookings.save
+    @booking = Booking.new(bookings_params)
+    if @booking.save
       render :show, status: :created
     else
       render_errors
@@ -27,7 +27,7 @@ class Api::V1::BookingsController < Api::V1::BaseController
   end
 
   def destroy
-    @bookings.destroy
+    @booking.destroy
     head :no_content
   end
 
@@ -38,10 +38,10 @@ class Api::V1::BookingsController < Api::V1::BaseController
   end
 
   def render_errors
-    render json: { errors: @bookings.errors.full_messages }
+    render json: { errors: @booking.errors.full_messages }
   end
 
   def bookings_params
-    params.require(:bookings).permit(:confirmation, :user_id, :scooter_id)
+    params.require(:booking).permit(:confirmation, :user_id, :scooter_id)
   end
 end
