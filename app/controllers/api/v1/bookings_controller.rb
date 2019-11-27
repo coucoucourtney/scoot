@@ -1,4 +1,4 @@
-class Api::V1::Bookings_Controller < Api::V1::BaseController
+class Api::V1::BookingsController < Api::V1::BaseController
   skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
   before_action :set_bookings, only: [:show, :update, :destroy]
 
@@ -34,7 +34,7 @@ class Api::V1::Bookings_Controller < Api::V1::BaseController
   private
 
   def set_bookings
-    @bookings = bookings.find(params[:id])
+    @booking = Booking.find(params[:id])
   end
 
   def render_errors
