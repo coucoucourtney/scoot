@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
+Booking.destroy_all
 Scooter.destroy_all
 User.destroy_all
 
