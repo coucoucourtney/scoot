@@ -7,4 +7,5 @@ Rails.application.routes.draw do
       resources :bookings, only: [:index, :create, :show, :destroy]
     end
   end
+  post '/login', to: 'login#login'
 end
