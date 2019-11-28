@@ -13,6 +13,8 @@
     json.year @booking.scooter.year
     json.user_id @booking.scooter.user_id
     json.location @booking.scooter.location
+    json.latitude @booking.scooter.latitude
+    json.longitude @booking.scooter.longitude
    end
    json.scooter_user do
     json.name @booking.scooter.user.name
