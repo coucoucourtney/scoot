@@ -41,6 +41,6 @@ class Api::V1::UsersController < Api::V1::BaseController
   end
 
   def user_params
-    params.require(:user).permit(:name, :location, :description, :phone_number)
+    params.require(:user).permit(:name, :location, :description, :phone_number, :avatar)
   end
 end
