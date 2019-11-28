@@ -35,6 +35,7 @@ class Api::V1::ScootersController < Api::V1::BaseController
 
   def set_scooter
     @scooter = Scooter.find(params[:id])
+    @user = @scooter.user
   end
 
   def render_errors
@@ -42,6 +43,6 @@ class Api::V1::ScootersController < Api::V1::BaseController
   end
 
   def scooter_params
-    params.require(:scooter).permit(:model, :top_speed, :price, :availability, :location, :battery, :year, :user_id, :latitude, :longitude)
+    params.require(:scooter).permit(:model, :top_speed, :price, :availability, :location, :battery, :year, :user_id, :latitude, :longitude, :picture)
   end
 end

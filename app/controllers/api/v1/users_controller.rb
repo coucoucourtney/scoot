@@ -26,7 +26,7 @@ class Api::V1::UsersController < Api::V1::BaseController
   end
 
   def destroy
-    @scooter.destroy
+    @user.destroy
     head :no_content
   end
 

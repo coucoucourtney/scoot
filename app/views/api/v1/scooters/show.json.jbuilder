@@ -5,3 +5,5 @@ json.bookings do
     json.commented_at booking.created_at.strftime("%A, %b %d")
   end
 end
+
+json.extract! @user, :id, :name, :location, :description, :phone_number, :open_id, :avatar
