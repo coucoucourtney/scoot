@@ -42,6 +42,6 @@ class Api::V1::ScootersController < Api::V1::BaseController
   end
 
   def scooter_params
-    params.require(:scooter).permit(:model, :top_speed, :price, :availability, :location, :battery, :year, :user_id)
+    params.require(:scooter).permit(:model, :top_speed, :price, :availability, :location, :battery, :year, :user_id, :picture)
   end
 end
