@@ -7,6 +7,7 @@ class Api::V1::ScootersController < Api::V1::BaseController
   end
 
   def show
+    @scooter = Scooter.find(params[:id])
   end
 
   def update
@@ -20,7 +21,7 @@ class Api::V1::ScootersController < Api::V1::BaseController
   def create
     @scooter = Scooter.new(scooter_params)
     if @scooter.save
-      render :show, status: :created
+      render :index, status: :created
     else
       render_errors
     end
