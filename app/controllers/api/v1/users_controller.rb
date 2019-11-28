@@ -1,5 +1,6 @@
 class Api::V1::UsersController < Api::V1::BaseController
-  before_action :set_user, only: [:show, :update]
+  skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
+  before_action :set_user, only: [:show, :update, :destroy]
   def index
     @users = User.all
     # render json: @users #Just for testing
@@ -26,7 +27,7 @@ class Api::V1::UsersController < Api::V1::BaseController
   end
 
   def destroy
-    @scooter.destroy
+    @user.destroy
     head :no_content
   end
 
@@ -41,6 +42,6 @@ class Api::V1::UsersController < Api::V1::BaseController
   end
 
   def user_params
-    params.require(:user).permit(:name, :location, :description, :phone_number)
+    params.require(:user).permit(:name, :location, :description, :phone_number, :open_id)
   end
 end
