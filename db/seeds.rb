@@ -35,10 +35,10 @@ puts User.count
 
 scooters = [
 
-  { model:'xyz', top_speed: '50km', price: '70', availability: 'true', location: '123 main st', battery: '48vh', year: '2019', user_id: user1.id, picture: 'https://images.unsplash.com/photo-1560693512-85fb8bc0c7a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80' },
-  { model:'fyi', top_speed: '50km', price: '70', availability: 'true', location: '123 main st', battery: '48vh', year: '2019', user_id: user2.id, picture: 'https://images.unsplash.com/photo-1476419972179-ac981d01257e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80' },
-  { model:'two', top_speed: '50km', price: '70', availability: 'true', location: '123 main st', battery: '48vh', year: '2019', user_id: user3.id, picture: 'https://images.unsplash.com/photo-1572513516094-231dcb7792e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'},
-  { model:'seven', top_speed: '50km', price: '90', availability: 'true', location: '123 main st', battery: '48vh', year: '2019', user_id: user4.id, picture: 'https://images.unsplash.com/photo-1569799003675-ba5214f5dcd5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=685&q=80' }
+  { model:'xyz', top_speed: '50km', price: '70', availability: 'true', location: '123 main st', battery: '48vh', year: '2019', user_id: user1.id, picture: 'https://images.unsplash.com/photo-1560693512-85fb8bc0c7a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80', longitude: 121.443199, latitude: 31.220733 },
+  { model:'fyi', top_speed: '50km', price: '70', availability: 'true', location: '123 main st', battery: '48vh', year: '2019', user_id: user2.id, picture: 'https://images.unsplash.com/photo-1476419972179-ac981d01257e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80', longitude: 121.442743, latitude: 31.219403 },
+  { model:'two', top_speed: '50km', price: '70', availability: 'true', location: '123 main st', battery: '48vh', year: '2019', user_id: user3.id, picture: 'https://images.unsplash.com/photo-1572513516094-231dcb7792e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80', longitude: 121.445656, latitude: 31.220013 },
+  { model:'seven', top_speed: '50km', price: '90', availability: 'true', location: '123 main st', battery: '48vh', year: '2019', user_id: user4.id, picture: 'https://images.unsplash.com/photo-1569799003675-ba5214f5dcd5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=685&q=80', longitude: 121.443940, latitude: 31.220068 }
 ]
 Scooter.create!(scooters)
 
