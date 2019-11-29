@@ -39,24 +39,21 @@ puts User.count
 
 scooters = [
 
-  { model:'Activa', top_speed: '40', price: '60', availability: 'true', location: '739 Dingxi Road, Shanghai', battery: '48v20ah', year: '2016', user_id: user1.id, picture: 'https://images.unsplash.com/photo-1560693512-85fb8bc0c7a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80' },
-  { model:'Jupiter', top_speed: '40', price: '80', availability: 'true', location: '66 Wulumuqi Middle Road, Shanghai', battery: '48v20ah', year: '2018', user_id: user2.id, picture: 'https://images.unsplash.com/photo-1476419972179-ac981d01257e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80' },
-  { model:'Access', top_speed: '35', price: '60', availability: 'true', location: '12 Wulumuqi Middle Rd, Shanghai', battery: '48v15ah', year: '2017', user_id: user3.id, picture: 'https://images.unsplash.com/photo-1572513516094-231dcb7792e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80' },
-  { model:'Dio', top_speed: '60', price: '90', availability: 'true', location: '83 Changshu Rd, Shanghai', battery: '60v20ah', year: '2016', user_id: user4.id, picture: 'https://images.unsplash.com/photo-1569799003675-ba5214f5dcd5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=685&q=80' },
+  { model:'Activa', top_speed: '40', price: '60', availability: 'true', location: '739 Dingxi Road', battery: '48v20ah', year: '2016', user_id: user1.id, picture: 'https://images.unsplash.com/photo-1560693512-85fb8bc0c7a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80' },
+  { model:'Jupiter', top_speed: '40', price: '80', availability: 'true', location: '66 Wulumuqi Middle Road', battery: '48v20ah', year: '2018', user_id: user2.id, picture: 'https://images.unsplash.com/photo-1476419972179-ac981d01257e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80' },
+  { model:'Access', top_speed: '35', price: '60', availability: 'true', location: '12 Wulumuqi Middle Road', battery: '48v15ah', year: '2017', user_id: user3.id, picture: 'https://images.unsplash.com/photo-1572513516094-231dcb7792e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80' },
+  { model:'Dio', top_speed: '60', price: '90', availability: 'true', location: '83 Changshu Rd', battery: '60v20ah', year: '2016', user_id: user4.id, picture: 'https://images.unsplash.com/photo-1569799003675-ba5214f5dcd5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=685&q=80' },
 
-  { model:'Pleasure', top_speed: '40', price: '70', availability: 'true', location: '65 Yanan W Road Shanghai', battery: '48v20ah', year: '2018', user_id: user4.id, picture: 'https://images.unsplash.com/photo-1556504506-7ced7edb59e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60' },
-  { model:'Maestro', top_speed: '40', price: '75', availability: 'true', location: '83 Changshu Rd, Shanghai', battery: '48v20ah', year: '2019', user_id: user1.id, picture: 'https://images.unsplash.com/photo-1515633607448-3dff12350f35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60' },
-  { model:'Fascino', top_speed: '70', price: '100', availability: 'true', location: '83 Changshu Rd, Shanghai', battery: '72v20ah', year: '2019', user_id: user2.id, picture: 'https://images.unsplash.com/photo-1565025683506-38734e4dea52?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60' },
-  { model:'Edge', top_speed: '40', price: '70', availability: 'true', location: '83 Changshu Rd, Shanghai', battery: '60v20ah', year: '2019', user_id: user2.id, picture: 'https://images.unsplash.com/photo-1565515701541-0ee7b922c5ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60' },
-  { model:'TVS', top_speed: '60', price: '120', availability: 'true', location: '83 Changshu Rd, Shanghai', battery: '60v20ah', year: '2019', user_id: user3.id, picture: 'https://images.unsplash.com/photo-1562925439-6076c6a50577?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60' },
-  { model:'Dio', top_speed: '10', price: '150', availability: 'true', location: '83 Changshu Rd, Shanghai', battery: '84v35ah', year: '2019', user_id: user4.id, picture: 'https://images.unsplash.com/photo-1558978806-73073843b15e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60' }
+  { model:'Pleasure', top_speed: '40', price: '70', availability: 'true', location: '65 Yanan W Road', battery: '48v20ah', year: '2018', user_id: user4.id, picture: 'https://images.unsplash.com/photo-1556504506-7ced7edb59e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60' },
+  { model:'Maestro', top_speed: '40', price: '75', availability: 'true', location: '83 Changshu Rd', battery: '48v20ah', year: '2019', user_id: user1.id, picture: 'https://images.unsplash.com/photo-1515633607448-3dff12350f35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60' },
+  { model:'Fascino', top_speed: '70', price: '100', availability: 'true', location: '83 Changshu Road', battery: '72v20ah', year: '2019', user_id: user2.id, picture: 'https://images.unsplash.com/photo-1565025683506-38734e4dea52?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60' },
+  { model:'Edge', top_speed: '40', price: '70', availability: 'true', location: 'NO.195,Anfu Road', battery: '60v20ah', year: '2019', user_id: user2.id, picture: 'https://images.unsplash.com/photo-1565515701541-0ee7b922c5ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60' },
+  { model:'TVS', top_speed: '60', price: '120', availability: 'true', location: '83 Changshu Road', battery: '60v20ah', year: '2019', user_id: user3.id, picture: 'https://images.unsplash.com/photo-1562925439-6076c6a50577?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60' },
+  { model:'Dio', top_speed: '10', price: '150', availability: 'true', location: '83 Changshu Road', battery: '84v35ah', year: '2019', user_id: user4.id, picture: 'https://images.unsplash.com/photo-1558978806-73073843b15e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60' }
 ]
 Scooter.create!(scooters)
 
 puts Scooter.count
 
-
-
-
-
-# Booking.create!( {confirmation: 'true', user_id: 1, scooter_id: 1 } )
+Booking.create!( {confirmation: 'true', user_id: 5, scooter_id: 1, booking_date: '2019-11-29'} )
+Booking.create!( {confirmation: 'true', user_id: 1, scooter_id: 2, booking_date: '2019-11-29'} )
