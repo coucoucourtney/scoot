@@ -10,12 +10,12 @@ Geocoder.configure(
   # api_key: nil,               # API key for geocoding service
   # cache: nil,                 # cache object (must respond to #[], #[]=, and #del)
   # cache_prefix: 'geocoder:',  # prefix (string) to use for all cache keys
-
+  timeout: 20,
   # Exceptions that should not be rescued by default
   # (if you want to implement custom error handling);
   # supports SocketError and Timeout::Error
   # always_raise: [],
-  units: :km,
+  units: :km
   # Calculation options
   # units: :mi,                 # :km for kilometers or :mi for miles
   # distances: :linear          # :spherical or :linear
